@@ -14,7 +14,7 @@ function Banner(props) {
 }
 
 Banner.propTypes = {
-  about: propTypes.string.isRequired
+  about: propTypes.bool.isRequired
 }
 
 export default Banner
