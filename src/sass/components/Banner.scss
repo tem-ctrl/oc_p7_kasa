@@ -1,0 +1,56 @@
+.banner {
+  min-width: 335px;
+  width: 100%;
+  border-radius: $small-border-radius;
+  mix-blend-mode: darken;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 22px;
+  &__home {
+    height: 111px;
+    background: url("../../assets/banner-bg-sm.png"),
+      url("../../assets/banner-sm.png") no-repeat;
+    background-size: cover;
+
+    &__h1 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  &__about {
+    height: 223px;
+    background: url("../../assets/about-bg-sm.png"),
+      url("../../assets/about-sm.png") no-repeat;
+    background-size: cover;
+
+    &__h1 {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    border-radius: $large-border-radius;
+    justify-content: center;
+    margin: 30px auto 45px;
+    &__home {
+      height: 223px;
+      background: url("../../assets/banner-bg.png"),
+        url("../../assets/banner.png");
+
+      &__h1 {
+        font-size: 48px;
+      }
+    }
+
+    &__about {
+      background: url("../../assets/banner-bg.png"),
+        url("../../assets/about.png");
+    }
+
+    &__sm {
+      display: none;
+    }
+  }
+}

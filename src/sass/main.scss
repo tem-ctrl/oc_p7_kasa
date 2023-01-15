@@ -1,0 +1,18 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/base";
+
+@import "./components/Banner";
+@import "./components/Card";
+@import "./components/Carousel";
+@import "./components/Dropdown";
+@import "./components/Footer";
+@import "./components/Gallery";
+@import "./components/Header";
+@import "./components/Rating";
+@import "./components/Tag";
+@import "./components/Host";
+
+@import "./pages/Error.scss";
+@import "./pages/Home.scss";
+@import "./pages/House.scss";

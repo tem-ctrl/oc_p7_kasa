@@ -1,0 +1,38 @@
+.card {
+  border-radius: $small-border-radius;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  height: 335px;
+  width: 100%; // 255px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 12px 3px $color-primary;
+    transform: scale(1.01);
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: 400;
+    padding-right: 20px;
+  }
+
+  &__img {
+    border-radius: $small-border-radius;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 340px;
+    height: 340px;
+  }
+}

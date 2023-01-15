@@ -1,0 +1,34 @@
+@mixin large-border {
+  border-radius: $large-border-radius;
+}
+
+@mixin small-border {
+  border-radius: $small-border-radius;
+}
+
+@mixin carousel-arrow($direction: "left") {
+  display: flex;
+  position: absolute;
+  top: calc(($carousel-height-sm - $carousel-arrow-height-sm) / 2);
+  @if ($direction: "right") {
+    right: 2%;
+  } @else {
+    left: 2%;
+  }
+  width: 12px;
+  height: 20px;
+  z-index: 20;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    top: calc(($carousel-height - $carousel-arrow-height) / 2);
+    width: 47px;
+    height: 79px;
+    top: 42%;
+  }
+}

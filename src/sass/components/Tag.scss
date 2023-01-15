@@ -1,0 +1,11 @@
+.tag {
+  background-color: $color-primary;
+  border-radius: $small-border-radius;
+  font-size: 14px;
+  padding: 3px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 25px;
+}

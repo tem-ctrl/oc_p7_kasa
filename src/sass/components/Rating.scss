@@ -1,0 +1,22 @@
+.rating {
+  display: flex;
+  column-gap: 4px;
+  height: 18px;
+  width: fit-content;
+  margin-top: 18px;
+
+  &__star {
+    height: 15px;
+    width: 15px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    column-gap: 8px;
+    height: 36px;
+
+    &__star {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
