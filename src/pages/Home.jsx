@@ -9,10 +9,10 @@ function Home() {
   const title = document.querySelector('title')
   title.textContent = 'Kasa - Accueil'
   return (
-    <div>
+    <AppContext.Provider value={houses}>
       <Banner about={false} />
       <Gallery />
-    </div>
+    </AppContext.Provider>
   )
 }
 
