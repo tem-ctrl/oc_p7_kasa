@@ -1,4 +1,5 @@
 import Banner from '../components/Banner'
+import Dropdown from '../components/Dropdown'
 
 function About() {
   const title = document.querySelector('title')
@@ -6,6 +7,7 @@ function About() {
   return (
     <>
       <Banner about={true} />
+      <Dropdown title="Temgoua Tag" description="Bla bla bla" />
     </>
   )
 }

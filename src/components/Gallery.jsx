@@ -9,7 +9,7 @@ function Gallery() {
   return (
     <div className='gallery'>
       {houses.map((house) => (
-        <Link className='gallery__link' key={`${house.id}`} to={`/house/:${house.id}`}>
+        <Link className='gallery__link' key={`${house.id}`} to={`/house/${house.id}`}>
           <Card title={`${house.title}`} image={`${house.cover}`} />
         </Link>
       ))}
