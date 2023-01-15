@@ -1,0 +1,23 @@
+.dropdown {
+  &__head {
+    background-color: $color-primary;
+    border-radius: $small-border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+  }
+  &__img {
+    &__rotated {
+      rotate: 180deg;
+    }
+  }
+  &__body {
+    padding: 20px;
+
+    &--closed {
+      display: none;
+    }
+  }
+}
