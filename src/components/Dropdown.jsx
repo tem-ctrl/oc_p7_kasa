@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import upArrow from '../assets/arrow-up.png'
+import propTypes from 'prop-types'
 
 function Dropdown(props) {
 
@@ -15,12 +16,29 @@ function Dropdown(props) {
           className={isOpen ? "dropdown__img" : "dropdown__img dropdown__img__rotated"}
         />
       </div>
-      <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed light-bg'}>
-        {props.description}
-      </p>
+        {
+          props.title === 'Description' ? (
+          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed light-bg'}>
+            {props.body}
+          </p>
+          ):(
+            <ul>
+              {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
+            </ul>
+          )
+        }
     </div>
   )
 }
 
+Dropdown.propTypes = {
+  title: propTypes.string,
+  description: propTypes.oneOfType([propTypes.array, propTypes.string])
+}
+
+Dropdown.defaultProps = {
+  title: 'Description',
+  description: "votre description ici..."
+}
 
 export default Dropdown

@@ -1,8 +1,8 @@
-function Host(props) {
+function Host({hostName, hostPicture}) {
   return (
     <div className='host'>
-      <p className='host__name'>{props.hostName}</p>
-      <img className='host__img' src={props.hostPicture} alt={props.hostName} />
+      <p className='host__name'>{hostName}</p>
+      <img className='host__img' src={hostPicture} alt={hostName} />
     </div>
   )
 }
