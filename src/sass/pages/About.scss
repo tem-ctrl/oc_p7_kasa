@@ -1,0 +1,13 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  margin: 0 auto 45px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 82.5%;
+    row-gap: 35px;
+  }
+}
