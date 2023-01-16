@@ -1,24 +1,48 @@
 .dropdown {
+  width: 100%;
   border-radius: 5px;
   &__head {
     background-color: $color-primary;
-    border-radius: $small-border-radius;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 30px;
     padding: 0 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
   }
   &__img {
+    width: 15px;
+    height: 9px;
     &__rotated {
       rotate: 180deg;
     }
   }
   &__body {
+    border-radius: 0 0 5px 5px;
     padding: 20px;
+    font-size: 12px;
+    line-height: 18px;
 
     &--closed {
       display: none;
+    }
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    &__head {
+      height: 47px;
+      font-size: 24px;
+    }
+    &__body {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__img {
+      width: 24px;
+      height: 14px;
     }
   }
 }
