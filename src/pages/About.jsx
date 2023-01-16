@@ -8,10 +8,10 @@ function About() {
   return (
     <>
       <Banner about={true} />
-      <div>
+      <div className='about'>
         {
           aboutData.map((elt) => (
-            <Dropdown title={elt.title} body={elt.body} key={elt.title} />
+            <Dropdown title={elt.title} body={elt.body} key={elt.title} className='about__drop' />
           ))
         }
       </div>
