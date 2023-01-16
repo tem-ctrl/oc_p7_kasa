@@ -2,12 +2,11 @@
   display: flex;
   column-gap: 10px;
   align-items: center;
-  // border: 2px solid red;
 
   &__name {
     text-align: right;
     font-size: 12px;
-    width: 95px;
+    width: 75px;
   }
 
   &__img {

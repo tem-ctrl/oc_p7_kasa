@@ -7,7 +7,7 @@ function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='dropdown light-bg'>
+    <div className={isOpen ? 'dropdown light-bg ' : 'dropdown white-bg'}>
       <div className='dropdown__head' onClick={() => setIsOpen(!isOpen)}>
         <p className='white'>{props.title}</p>
         <img
@@ -18,11 +18,11 @@ function Dropdown(props) {
       </div>
       {
         props.title !== 'Équipements' ? (
-          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed light-bg'}>
+          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
             {props.body}
           </p>
         ) : (
-          <ul>
+          <ul className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
             {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
           </ul>
         )
