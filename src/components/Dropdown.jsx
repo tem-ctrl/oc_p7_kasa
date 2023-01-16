@@ -16,17 +16,17 @@ function Dropdown(props) {
           className={isOpen ? "dropdown__img" : "dropdown__img dropdown__img__rotated"}
         />
       </div>
-        {
-          props.title === 'Description' ? (
+      {
+        props.title !== 'Équipements' ? (
           <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed light-bg'}>
             {props.body}
           </p>
-          ):(
-            <ul>
-              {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
-            </ul>
-          )
-        }
+        ) : (
+          <ul>
+            {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
+          </ul>
+        )
+      }
     </div>
   )
 }

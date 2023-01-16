@@ -1,5 +1,6 @@
 import Banner from '../components/Banner'
 import Dropdown from '../components/Dropdown'
+import { aboutData } from '../data/aboutData'
 
 function About() {
   const title = document.querySelector('title')
@@ -7,7 +8,13 @@ function About() {
   return (
     <>
       <Banner about={true} />
-      <Dropdown title="Temgoua Tag" description="Bla bla bla" />
+      <div>
+        {
+          aboutData.map((elt) => (
+            <Dropdown title={elt.title} body={elt.body} key={elt.title} />
+          ))
+        }
+      </div>
     </>
   )
 }
