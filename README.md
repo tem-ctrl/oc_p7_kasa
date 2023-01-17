@@ -1,4 +1,4 @@
-# Projet: Dynamisez une page web avec des animations CSS
+# Projet: Créez une application web de location immobilière avec React
 
 # Scénario
 
