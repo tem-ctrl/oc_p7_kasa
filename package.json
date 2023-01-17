@@ -45,7 +45,7 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "homepage": "https://tem-ctrl.github.io/oc_p7_kasa",
+  "homepage": "https://tem-ctrl.github.io/oc_p7_kasa/",
   "repository": {
     "type": "git",
     "url": "https://github.com/tem-ctrl/oc_p7_kasa.git"
