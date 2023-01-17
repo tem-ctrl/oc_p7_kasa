@@ -8,7 +8,7 @@ import House from './pages/House'
 import ScrollToTop from './ScrollToTop'
 
 const MyRoutes = (
-  <Router>
+  <Router basename='/oc_p7_kasa'>
     <ScrollToTop>
       <Header />
       <main className='main'>
