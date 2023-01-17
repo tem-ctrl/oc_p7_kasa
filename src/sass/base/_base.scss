@@ -10,16 +10,14 @@
 
 #root {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flex-display($di: column, $jc: initial);
 }
 
 .main {
-  margin: 0 20px;
+  margin: 0 $main-margin-sm;
   flex-grow: 1;
   @media all and (min-width: $desktop-breakpoint) {
-    margin: 0 80px;
+    margin: 0 $main-margin;
   }
 }
 

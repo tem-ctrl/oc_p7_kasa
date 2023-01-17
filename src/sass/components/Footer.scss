@@ -1,11 +1,8 @@
 .footer {
-  display: flex;
-  flex-direction: column;
+  @include flex-display($di: column, $jc: center, $ai: center);
   row-gap: 35px;
-  align-items: center;
-  justify-content: center;
   background-color: #000;
-  height: $footer-height;
+  height: $footer-height-sm;
   justify-self: flex-end;
 
   &__h2 {
@@ -19,6 +16,7 @@
 
   @media screen and (min-width: $desktop-breakpoint) {
     padding-top: 50px;
+    height: $footer-height;
     &__h2 {
       font-size: 24px;
     }

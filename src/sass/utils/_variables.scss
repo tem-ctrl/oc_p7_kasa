@@ -13,14 +13,19 @@ $carousel-arrow-width-sm: 12px;
 
 // Responsive breakpoints
 $desktop-breakpoint: 768px;
-$min-width: 360px;
+$min-width: 320px;
 $max-width: 1440px;
 
 // Components' characteristics
-$small-border-radius: 10px;
+$small-border-radius: 5px;
+$medium-border-radius: 10px;
 $large-border-radius: 25px;
+
 $header-height: 108px;
+$header-height-sm: 48px;
+
 $footer-height: 210px;
+$footer-height-sm: 150px;
 
 $main-margin: 80px;
 $main-margin-sm: 20px;

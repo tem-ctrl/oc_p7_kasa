@@ -1,6 +1,6 @@
 .rating {
-  display: flex;
-  column-gap: 4px;
+  @include flex-display();
+  column-gap: 3px;
   height: 18px;
   width: fit-content;
   margin-top: 18px;
@@ -11,7 +11,7 @@
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
-    column-gap: 8px;
+    column-gap: 6px;
     height: 36px;
 
     &__star {

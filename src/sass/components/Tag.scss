@@ -1,15 +1,13 @@
 .tag {
   background-color: $color-primary;
-  border-radius: 5px;
+  @include small-border;
   font-size: 10px;
   padding: 0px 20px 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-display($jc: center, $ai: center);
   width: fit-content;
   height: 18px;
   @media screen and (min-width: $desktop-breakpoint) {
-    border-radius: $small-border-radius;
+    @include medium-border;
     font-size: 14px;
     height: 25px;
     padding: 0px 30px 1px;

@@ -1,16 +1,14 @@
 .header {
-  height: 48px;
-  display: flex;
-  justify-content: space-between;
+  height: $header-height-sm;
+  @include flex-display($jc: space-between, $ai: center);
   padding: 40px $main-margin-sm;
-  align-items: center;
 
   &__logo {
     height: 48px;
     width: 110px;
   }
   @media all and (min-width: $desktop-breakpoint) {
-    height: 108px;
+    height: $header-height;
     padding: 40px $main-margin;
     &__logo {
       height: 58px;
@@ -20,8 +18,7 @@
 }
 
 .nav {
-  display: flex;
-  align-items: center;
+  @include flex-display($ai: center);
   column-gap: 20px;
   &__link {
     font-size: 14px;

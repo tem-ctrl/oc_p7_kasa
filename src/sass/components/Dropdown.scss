@@ -1,9 +1,9 @@
 .dropdown {
   width: 100%;
-  border-radius: 5px;
+  @include small-border;
   &__head {
     background-color: $color-primary;
-    border-radius: 5px;
+    @include small-border;
     display: flex;
     justify-content: space-between;
     align-items: center;

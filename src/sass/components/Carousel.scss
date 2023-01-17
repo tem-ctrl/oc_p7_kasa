@@ -1,20 +1,16 @@
 .carousel {
-  display: flex;
-  flex-wrap: nowrap;
+  @include flex-display();
   overflow: hidden;
   margin: 15px auto;
   width: 100%;
   height: $carousel-height-sm;
   position: relative;
-  border-radius: $large-border-radius;
+  @include large-border;
   &__arrows {
     display: contents;
   }
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include flex-display($jc: center, $ai: center);
     &__number {
       position: absolute;
       bottom: 30px;
@@ -22,11 +18,11 @@
       display: none;
     }
     &__img {
-      object-fit: contain;
-      border-radius: $large-border-radius;
-      opacity: 0;
+      @include large-border;
+      display: none;
       &__active {
         opacity: 1;
+        display: block;
       }
     }
   }

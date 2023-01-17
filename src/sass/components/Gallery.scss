@@ -1,9 +1,6 @@
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  @include flex-display($jc: center, $ai: center, $wr: wrap);
   gap: 20px;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 40px;
   padding: 0px;
 

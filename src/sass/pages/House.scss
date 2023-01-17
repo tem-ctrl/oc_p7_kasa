@@ -11,31 +11,24 @@
   }
 
   &__tags {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-display($wr: wrap);
     gap: 10px;
   }
 
   &__host {
     width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include flex-display($di: row-reverse, $jc: space-between, $ai: flex-end);
     margin: 16px 0px;
   }
 
   &__desc {
-    display: flex;
-    flex-direction: column;
+    @include flex-display($di: column);
     row-gap: 20px;
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-display($jc: space-between, $ai: center);
 
     &__head {
       width: 100%;
@@ -51,8 +44,7 @@
     }
 
     &__host {
-      flex-direction: column;
-      justify-content: center;
+      @include flex-display($di: column, $jc: center);
       width: 27.5%;
     }
     &__desc {

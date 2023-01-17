@@ -1,7 +1,5 @@
 .error {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-display($di: column, $ai: center);
   text-align: center;
   height: calc(100vh - $header-height - $footer-height);
   row-gap: 15px;

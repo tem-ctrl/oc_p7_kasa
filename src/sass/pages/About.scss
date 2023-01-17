@@ -1,8 +1,6 @@
 .about {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-display($di: column, $ai: center);
   row-gap: 20px;
   margin: 0 auto 45px;
 
