@@ -10,9 +10,8 @@
     @include small-border;
     @include dimensions($h: 30px);
     @include flex-display($jc: space-between, $ai: center);
+    @include font($fs: 13px, $fw: 500);
     padding: 0 20px;
-    font-size: 13px;
-    font-weight: 500;
     cursor: pointer;
   }
   &__img {
@@ -25,8 +24,7 @@
   &__body {
     border-radius: 0 0 $small-border-radius $small-border-radius;
     padding: 20px;
-    font-size: 12px;
-    line-height: 18px;
+    @include font($fs: 12px, $lh: 18px);
     list-style-type: none;
 
     &--closed {
@@ -37,11 +35,10 @@
   @media screen and (min-width: $desktop-breakpoint) {
     &__head {
       @include dimensions($h: 47px);
-      font-size: 24px;
+      @include font($fs: 24px);
     }
     &__body {
-      font-size: 18px;
-      line-height: 24px;
+      @include font($lh: 26px);
     }
     &__img {
       @include dimensions($h: 14px, $w: 24px);

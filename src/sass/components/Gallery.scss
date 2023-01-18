@@ -8,10 +8,9 @@
   padding: 0px;
 
   @media screen and (min-width: $desktop-breakpoint) {
-    gap: 40px;
-    padding: 40px;
-    border-radius: 25px;
+    @include flex-display($ga: 40px, $jc: space-evenly);
+    @include large-border;
     background-color: $color-light-bg;
-    justify-content: space-evenly;
+    padding: 40px;
   }
 }

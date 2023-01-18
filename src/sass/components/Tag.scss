@@ -5,15 +5,15 @@
 .tag {
   background-color: $color-primary;
   @include small-border;
-  font-size: 10px;
-  padding: 0px 20px 1px;
+  @include font($fs: 10px);
   @include flex-display($jc: center, $ai: center);
-  width: fit-content;
-  height: 18px;
+  @include dimensions($w: fit-content, $h: 18px);
+  padding: 0px 20px 1px;
+
   @media screen and (min-width: $desktop-breakpoint) {
     @include medium-border;
-    font-size: 14px;
-    height: 25px;
+    @include font($fs: 14px);
+    @include dimensions($w: fit-content, $h: 25px);
     padding: 0px 30px 1px;
   }
 }

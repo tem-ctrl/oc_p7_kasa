@@ -9,8 +9,7 @@
   justify-self: flex-end;
 
   &__h2 {
-    font-size: 12px;
-    font-weight: 400;
+    @include font($fs: 12px);
   }
 
   &__logo {
@@ -21,7 +20,7 @@
     padding-top: 50px;
     @include dimensions($h: $footer-height);
     &__h2 {
-      font-size: 24px;
+      @include font($fs: 24px);
     }
   }
 }

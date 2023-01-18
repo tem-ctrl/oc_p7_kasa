@@ -20,11 +20,21 @@
   $ga: normal
 ) {
   display: flex;
-  flex-direction: $di;
-  justify-content: $jc;
-  align-items: $ai;
-  flex-wrap: $wr;
-  gap: $ga;
+  @if ($di != row) {
+    flex-direction: $di;
+  }
+  @if ($jc != initial) {
+    justify-content: $jc;
+  }
+  @if ($ai != initial) {
+    align-items: $ai;
+  }
+  @if ($wr != nowrap) {
+    flex-wrap: $wr;
+  }
+  @if ($ga != normal) {
+    gap: $ga;
+  }
 }
 
 @mixin dimensions($h: 100%, $w: 100%) {
@@ -32,7 +42,13 @@
   width: $w;
 }
 
-@mixin font($fs: 18px, $fw: 400) {
+@mixin font($fs: 18px, $fw: 400, $lh: normal, $ta: left) {
   font-size: $fs;
   font-weight: $fw;
+  @if ($lh != normal) {
+    line-height: $lh;
+  }
+  @if ($ta != left) {
+    text-align: $ta;
+  }
 }

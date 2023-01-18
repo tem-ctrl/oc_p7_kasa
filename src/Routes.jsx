@@ -5,7 +5,7 @@ import Error from './pages/Error'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import House from './pages/House'
-import ScrollToTop from './ScrollToTop'
+import ScrollToTop from './utils/ScrollToTop'
 
 const MyRoutes = (
   <BrowserRouter>

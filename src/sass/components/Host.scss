@@ -6,8 +6,7 @@
   @include flex-display($ai: center, $ga: 10px);
 
   &__name {
-    text-align: right;
-    font-size: 12px;
+    @include font($fs: 12px, $ta: right);
     @include dimensions($w: 75px, $h: fit-content);
   }
 
@@ -18,7 +17,7 @@
 
   @media screen and (min-width: $desktop-breakpoint) {
     &__name {
-      font-size: 18px;
+      @include font();
       @include dimensions($w: 100px, $h: fit-content);
     }
 

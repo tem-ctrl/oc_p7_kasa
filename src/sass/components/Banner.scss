@@ -17,8 +17,7 @@
     background-position: bottom;
 
     &__h1 {
-      font-size: 24px;
-      font-weight: 400;
+      @include font($fs: 24px);
     }
   }
   &__about {
@@ -36,17 +35,19 @@
     @include large-border;
     justify-content: center;
     margin: 30px auto 45px;
+
     &__home {
       height: 223px;
 
       &__h1 {
-        font-size: 48px;
+        @include font($fs: 48px);
       }
     }
 
     &__about {
       background: url("../../assets/banner-bg.png"),
-        url("../../assets/about.png");
+        url("../../assets/about.png") no-repeat;
+      background-size: cover;
     }
 
     &__sm {

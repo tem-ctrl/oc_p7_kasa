@@ -3,13 +3,11 @@
 */
 .house {
   &__title {
-    font-size: 18px;
-    font-weight: 500;
+    @include font($fw: 500);
   }
 
   &__location {
-    font-size: 14px;
-    font-weight: 400;
+    @include font($fs: 14px);
     margin: 10px 0px;
   }
 
@@ -29,7 +27,7 @@
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
-    @include flex-display($jc: space-between, $ai: center);
+    @include flex-display($jc: space-between, $ai: center, $ga: 20px);
 
     &__head {
       width: 100%;
@@ -37,11 +35,11 @@
     }
 
     &__title {
-      font-size: 36px;
+      @include font($fs: 36px);
     }
 
     &__location {
-      font-size: 18px;
+      @include font();
     }
 
     &__host {

@@ -14,13 +14,10 @@
     transform: scale(1.01);
   }
   &__title {
-    font-size: 18px;
-    line-height: 26px;
-    text-align: left;
+    @include font($lh: 26px);
     position: absolute;
     bottom: 20px;
     left: 20px;
-    font-weight: 400;
     padding-right: 20px;
   }
 

@@ -30,7 +30,6 @@
 
     &__active {
       object-fit: cover;
-      opacity: 1;
       display: block;
     }
   }
@@ -41,6 +40,7 @@
     max-height: $carousel-arrow-height-sm;
     max-width: $carousel-arrow-width-sm;
     cursor: pointer;
+    
     &:hover,
     &:focus {
       transform: scale(1.1);
