@@ -1,8 +1,10 @@
+/*
+* Error page styles
+*/
 .error {
-  @include flex-display($di: column, $ai: center);
+  @include flex-display($di: column, $ai: center, $ga: 15px);
   text-align: center;
   height: calc(100vh - $header-height - $footer-height);
-  row-gap: 15px;
 
   &__h1 {
     font-size: 96px;
@@ -16,17 +18,18 @@
   &__link {
     margin: 20% auto 5px;
     padding: 7.5px 10px;
-    border-radius: 7.5px;
+    @include small-border;
 
     &:hover,
     &:focus {
       background-color: $color-light-bg;
       color: #000;
+      font-weight: bold;
     }
   }
 
   @media all and (min-width: $desktop-breakpoint) {
-    height: calc(130vh - $header-height - $footer-height);
+    height: calc(140vh - $header-height - $footer-height);
     &__h1 {
       font-size: 240px;
       font-weight: 700;

@@ -1,3 +1,5 @@
+// Reusable pieces of codes
+
 @mixin large-border {
   border-radius: $large-border-radius;
 }
@@ -10,10 +12,22 @@
   border-radius: $small-border-radius;
 }
 
-@mixin flex-display($di: row, $jc: initial, $ai: initial, $wr: nowrap) {
+@mixin flex-display(
+  $di: row,
+  $jc: initial,
+  $ai: initial,
+  $wr: nowrap,
+  $ga: normal
+) {
   display: flex;
   flex-direction: $di;
   justify-content: $jc;
   align-items: $ai;
   flex-wrap: $wr;
+  gap: $ga;
+}
+
+@mixin dimensions($h: 100%, $w: 100%) {
+  height: $h;
+  width: $w;
 }

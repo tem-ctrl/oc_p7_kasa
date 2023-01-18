@@ -1,11 +1,10 @@
 .about {
   width: 100%;
-  @include flex-display($di: column, $ai: center);
-  row-gap: 20px;
+  @include flex-display($di: column, $ai: center, $ga: 20px);
   margin: 0 auto 45px;
 
   @media screen and (min-width: $desktop-breakpoint) {
     width: 82.5%;
-    row-gap: 35px;
+    gap: 35px;
   }
 }

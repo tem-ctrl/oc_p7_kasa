@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Error from './pages/Error'
@@ -8,20 +8,20 @@ import House from './pages/House'
 import ScrollToTop from './ScrollToTop'
 
 const MyRoutes = (
-  <Router>
-    <ScrollToTop>
-      <Header />
+  <BrowserRouter>
+    <ScrollToTop>                    {/* Open each route at the top of the page*/}
+      <Header />                     {/* Include header to each page */}
       <main className='main'>
-        <Routes>
+        <Routes>                     {/* Define different routes */}
           <Route exact path='/' element={<Home />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/house/:houseId' element={<House />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer />                     {/* Include footer to each page */}
     </ScrollToTop>
-  </Router>
+  </BrowserRouter>
 )
 
 export default MyRoutes

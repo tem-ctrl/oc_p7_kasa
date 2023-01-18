@@ -1,11 +1,15 @@
+/*
+* Carousel present on House page
+*/
+
 .carousel {
   @include flex-display();
+  @include dimensions($h: $carousel-height-sm);
+  @include large-border;
   overflow: hidden;
   margin: 15px auto;
-  width: 100%;
-  height: $carousel-height-sm;
   position: relative;
-  @include large-border;
+
   &__arrows {
     display: contents;
   }
@@ -17,13 +21,15 @@
       left: 49%;
       display: none;
     }
-    &__img {
-      @include large-border;
-      display: none;
-      &__active {
-        opacity: 1;
-        display: block;
-      }
+  }
+  &__img {
+    @include large-border;
+    // display: none;
+    object-fit: cover;
+    opacity: 0;
+    &__active {
+      opacity: 1;
+      display: block;
     }
   }
   &__arrow {
@@ -45,7 +51,7 @@
   }
   @media screen and (min-width: $desktop-breakpoint) {
     margin: 40px auto;
-    height: $carousel-height;
+    @include dimensions($h: $carousel-height);
     &__item {
       &__number {
         display: initial;

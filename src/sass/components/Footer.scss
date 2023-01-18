@@ -1,8 +1,11 @@
+/*
+* footer on each page
+*/
+
 .footer {
-  @include flex-display($di: column, $jc: center, $ai: center);
-  row-gap: 35px;
+  @include flex-display($di: column, $jc: center, $ai: center, $ga: 35px);
+  @include dimensions($h: $footer-height-sm);
   background-color: #000;
-  height: $footer-height-sm;
   justify-self: flex-end;
 
   &__h2 {
@@ -11,12 +14,12 @@
   }
 
   &__logo {
-    height: 36px;
+    @include dimensions($h: 36px);
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
     padding-top: 50px;
-    height: $footer-height;
+    @include dimensions($h: $footer-height);
     &__h2 {
       font-size: 24px;
     }

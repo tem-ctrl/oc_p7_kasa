@@ -1,28 +1,29 @@
+/*
+* Host picture and name on House page
+*/
+
 .host {
-  @include flex-display($ai: center);
-  column-gap: 10px;
+  @include flex-display($ai: center, $ga: 10px);
 
   &__name {
     text-align: right;
     font-size: 12px;
-    width: 75px;
+    @include dimensions($w: 75px, $h: fit-content);
   }
 
   &__img {
-    height: 32px;
-    width: 32px;
+    @include dimensions($w: 32px, $h: 32px);
     border-radius: 16px;
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
     &__name {
       font-size: 18px;
-      width: 100px;
+      @include dimensions($w: 100px, $h: fit-content);
     }
 
     &__img {
-      height: 64px;
-      width: 64px;
+      @include dimensions($w: 64px, $h: 64px);
       border-radius: 32px;
     }
   }

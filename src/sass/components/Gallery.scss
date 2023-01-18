@@ -1,6 +1,9 @@
+/*
+* Gallery of houses' cards on Home page
+*/
+
 .gallery {
-  @include flex-display($jc: center, $ai: center, $wr: wrap);
-  gap: 20px;
+  @include flex-display($jc: center, $ai: center, $wr: wrap, $ga: 20px);
   margin-bottom: 40px;
   padding: 0px;
 

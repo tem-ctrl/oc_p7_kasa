@@ -1,3 +1,6 @@
+/*
+* House page styles
+*/
 .house {
   &__title {
     font-size: 18px;
@@ -11,8 +14,7 @@
   }
 
   &__tags {
-    @include flex-display($wr: wrap);
-    gap: 10px;
+    @include flex-display($wr: wrap, $ga: 10px);
   }
 
   &__host {
@@ -22,8 +24,7 @@
   }
 
   &__desc {
-    @include flex-display($di: column);
-    row-gap: 20px;
+    @include flex-display($di: column, $ga: 20px);
     margin-bottom: 40px;
   }
 
@@ -44,12 +45,11 @@
     }
 
     &__host {
-      @include flex-display($di: column, $jc: center);
+      @include flex-display($di: column, $jc: center, $ai: flex-end);
       width: 27.5%;
     }
     &__desc {
-      flex-direction: row;
-      gap: 50px;
+      @include flex-display($ga: 50px);
     }
   }
 }

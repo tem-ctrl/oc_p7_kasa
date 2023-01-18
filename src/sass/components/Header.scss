@@ -1,25 +1,28 @@
+/*
+* Header on each page
+*/
+
 .header {
-  height: $header-height-sm;
+  @include dimensions($h: $header-height-sm);
   @include flex-display($jc: space-between, $ai: center);
   padding: 40px $main-margin-sm;
 
   &__logo {
-    height: 48px;
-    width: 110px;
+    @include dimensions($h: 48px, $w: 110px);
   }
+
   @media all and (min-width: $desktop-breakpoint) {
-    height: $header-height;
+    @include dimensions($h: $header-height);
     padding: 40px $main-margin;
     &__logo {
-      height: 58px;
-      width: 170px;
+      @include dimensions($h: 58px, $w: 170px);
     }
   }
 }
 
 .nav {
-  @include flex-display($ai: center);
-  column-gap: 20px;
+  @include flex-display($ai: center, $ga: 20px);
+
   &__link {
     font-size: 14px;
     &:hover,
@@ -29,6 +32,7 @@
   }
   @media all and (min-width: $desktop-breakpoint) {
     column-gap: 50px;
+
     &__link {
       font-size: 24px;
     }

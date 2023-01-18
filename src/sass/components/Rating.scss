@@ -1,22 +1,22 @@
+/*
+* Rating stars on House page
+*/
+
 .rating {
-  @include flex-display();
-  column-gap: 3px;
-  height: 18px;
-  width: fit-content;
+  @include flex-display($ga: 3px);
+  @include dimensions($h: 18px, $w: fit-content);
   margin-top: 18px;
 
   &__star {
-    height: 15px;
-    width: 15px;
+    @include dimensions($h: 15px, $w: 15px);
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
     column-gap: 6px;
-    height: 36px;
+    @include dimensions($h: 36px, $w: fit-content);
 
     &__star {
-      height: 30px;
-      width: 30px;
+      @include dimensions($h: 30px, $w: 30px);
     }
   }
 }
