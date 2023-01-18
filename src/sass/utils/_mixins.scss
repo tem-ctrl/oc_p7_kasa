@@ -31,3 +31,8 @@
   height: $h;
   width: $w;
 }
+
+@mixin font($fs: 18px, $fw: 400) {
+  font-size: $fs;
+  font-weight: $fw;
+}
