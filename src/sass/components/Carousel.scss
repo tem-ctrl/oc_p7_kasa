@@ -13,6 +13,7 @@
   &__arrows {
     display: contents;
   }
+
   &__item {
     @include flex-display($jc: center, $ai: center);
     &__number {
@@ -22,16 +23,18 @@
       display: none;
     }
   }
+
   &__img {
     @include large-border;
-    // display: none;
-    object-fit: cover;
-    opacity: 0;
+    display: none;
+
     &__active {
+      object-fit: cover;
       opacity: 1;
       display: block;
     }
   }
+
   &__arrow {
     position: absolute;
     bottom: calc(($carousel-height-sm - $carousel-arrow-height-sm) / 2);
