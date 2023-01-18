@@ -20,21 +20,11 @@
   $ga: normal
 ) {
   display: flex;
-  @if ($di != row) {
-    flex-direction: $di;
-  }
-  @if ($jc != initial) {
-    justify-content: $jc;
-  }
-  @if ($ai != initial) {
-    align-items: $ai;
-  }
-  @if ($wr != nowrap) {
-    flex-wrap: $wr;
-  }
-  @if ($ga != normal) {
-    gap: $ga;
-  }
+  flex-direction: $di;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $wr;
+  gap: $ga;
 }
 
 @mixin dimensions($h: 100%, $w: 100%) {

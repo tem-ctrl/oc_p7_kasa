@@ -29,6 +29,7 @@
     display: none;
 
     &__active {
+      min-width: 100%;
       object-fit: cover;
       display: block;
     }
@@ -40,7 +41,7 @@
     max-height: $carousel-arrow-height-sm;
     max-width: $carousel-arrow-width-sm;
     cursor: pointer;
-    
+
     &:hover,
     &:focus {
       transform: scale(1.1);

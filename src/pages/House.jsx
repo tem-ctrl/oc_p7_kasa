@@ -1,4 +1,4 @@
-import { useContext, Fragment } from 'react'
+import { createContext, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 import Error from '../pages/Error'
@@ -9,9 +9,10 @@ import Dropdown from '../components/Dropdown'
 import Rating from '../components/Rating'
 
 
-function House() {
+export const houseContext = createContext(null) // Context to provide to its own children
 
-  const houses = useContext(AppContext)
+function House() {
+  const houses = useContext(AppContext) // Using context from home page
   const { houseId } = useParams()
   const house = houses.find((elt) => elt.id === houseId)
 
@@ -24,8 +25,8 @@ function House() {
     title.textContent = `Kasa - ${house.title}`
 
     return (
-      <Fragment>
-        <Carousel props={house} />
+      <houseContext.Provider value={house}>
+        <Carousel />
         <section className="house">
           <div className="house__head">
             <h1 className="house__title">{house.title}</h1>
@@ -37,8 +38,8 @@ function House() {
             </div>
           </div>
           <div className="house__host">
-            <Host hostName={house.host.name} hostPicture={house.host.picture} />
-            <Rating score={parseInt(house.rating)} />
+            <Host />
+            <Rating />
           </div>
         </section>
 
@@ -46,7 +47,7 @@ function House() {
           <Dropdown title="Description" body={house.description} />
           <Dropdown title="Équipements" body={house.equipments} />
         </div>
-      </Fragment>
+      </houseContext.Provider>
     )
   }
 }

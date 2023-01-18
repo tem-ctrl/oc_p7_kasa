@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import arrowLeft from '../assets/arrow-left.png'
 import arrowRight from '../assets/arrow-right.png'
+import { houseContext } from '../pages/House'
 
-function Carousel({ props }) {
+function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const maxLength = props.pictures.length
+  const house = useContext(houseContext)
+  const maxLength = house.pictures.length
 
   function Scroll(direction) {
     if (direction === 'right') {
@@ -16,8 +18,8 @@ function Carousel({ props }) {
 
   return (
     <div className="carousel light-bg">
-      {props.pictures.map((picture, index) => (
-        <div className="carousel__item" key={`${props.id}-${index}`}>
+      {house.pictures.map((picture, index) => (
+        <div className="carousel__item" key={`${house.id}-${index}`}>
           {maxLength > 1 && (
             <div className="carousel__arrows">
               <img

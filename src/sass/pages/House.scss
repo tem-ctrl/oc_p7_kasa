@@ -27,7 +27,7 @@
   }
 
   @media screen and (min-width: $desktop-breakpoint) {
-    @include flex-display($jc: space-between, $ai: center, $ga: 20px);
+    @include flex-display($di: row, $jc: space-between, $ai: center, $ga: 20px);
 
     &__head {
       width: 100%;

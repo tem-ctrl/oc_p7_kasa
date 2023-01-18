@@ -8,7 +8,7 @@
   padding: 0px;
 
   @media screen and (min-width: $desktop-breakpoint) {
-    @include flex-display($ga: 40px, $jc: space-evenly);
+    @include flex-display($ga: 40px, $jc: space-evenly, $wr: wrap);
     @include large-border;
     background-color: $color-light-bg;
     padding: 40px;

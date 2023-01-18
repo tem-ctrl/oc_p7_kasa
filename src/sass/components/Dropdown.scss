@@ -3,7 +3,7 @@
 */
 
 .dropdown {
-  @include dimensions($h: fit-content);
+  @include dimensions($w: 100%, $h: initial);
   @include small-border;
   &__head {
     background-color: $color-primary;

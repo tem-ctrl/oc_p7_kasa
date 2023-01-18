@@ -1,7 +1,11 @@
+import { useContext } from 'react'
+import { houseContext } from '../pages/House'
 import starColor from '../assets/star-color.png'
 import starGrey from '../assets/star-grey.png'
 
-function Rating({ score }) {
+
+function Rating() {
+  const score = parseInt(useContext(houseContext).rating)
   const listStars = [1, 2, 3, 4, 5]
   var newScore = score
   if (score <= 0) {
