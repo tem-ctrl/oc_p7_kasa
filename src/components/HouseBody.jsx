@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { Fragment, useContext } from 'react'
 import { houseContext } from '../pages/House'
 import Dropdown from './Dropdown'
 import Host from './Host'
@@ -6,10 +6,12 @@ import Rating from './Rating'
 import Tag from './Tag'
 
 function HouseBody() {
+  // Get house data from context
   const house = useContext(houseContext)
 
   return (
-    <>
+    // Display this data on House page
+    <Fragment>
       <section className="house">
         <div className="house__head">
           <h1 className="house__title">{house.title}</h1>
@@ -30,7 +32,7 @@ function HouseBody() {
         <Dropdown title="Description" body={house.description} />
         <Dropdown title="Équipements" body={house.equipments} />
       </div>
-    </>
+    </Fragment>
   )
 }
 

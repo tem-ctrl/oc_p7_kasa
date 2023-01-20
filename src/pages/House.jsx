@@ -22,12 +22,13 @@ function House() {
       <Error />
     )
   } else {
+
     // Set the page title
     const title = document.querySelector('title')
     title.textContent = `Kasa - ${house.title}`
 
     return (
-      // Provide house data to its children through context
+      // Provide house data to its children
       <houseContext.Provider value={house}>
         <Carousel />
         <HouseBody />

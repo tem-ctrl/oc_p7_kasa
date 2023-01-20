@@ -1,4 +1,4 @@
-import propTypes from 'prop-types'
+// import propTypes from 'prop-types'
 
 function Tag(props) {
   return (
@@ -9,13 +9,13 @@ function Tag(props) {
 }
 
 
-Tag.propTypes = {
-  name: propTypes.string.isRequired
-}
+// Tag.propTypes = {
+//   name: propTypes.string.isRequired
+// }
 
-Tag.defaultProps = {
-  title: 'Tag-name'
-}
+// Tag.defaultProps = {
+//   name: 'Tag-name'
+// }
 
 
 export default Tag

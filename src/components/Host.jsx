@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { houseContext } from '../pages/House'
 
 function Host() {
+  // Get host information from house data, provided by houseContext
   const host = useContext(houseContext).host
   return (
     <div className='host'>

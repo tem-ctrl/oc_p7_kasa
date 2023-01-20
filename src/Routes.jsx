@@ -9,17 +9,22 @@ import ScrollToTop from './utils/ScrollToTop'
 
 const MyRoutes = (
   <BrowserRouter>
-    <ScrollToTop>                    {/* Open each route at the top of the page*/}
-      <Header />                     {/* Include header to each page */}
+
+    {/* Open each route at the top of the page
+       Include header and footer to each page 
+       Define different routes */}
+
+    <ScrollToTop>
+      <Header />
       <main className='main'>
-        <Routes>                     {/* Define different routes */}
+        <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/house/:houseId' element={<House />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </main>
-      <Footer />                     {/* Include footer to each page */}
+      <Footer />
     </ScrollToTop>
   </BrowserRouter>
 )

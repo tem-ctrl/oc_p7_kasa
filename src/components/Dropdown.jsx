@@ -4,19 +4,20 @@ import propTypes from 'prop-types'
 
 function Dropdown(props) {
 
+  // Set dropdown to be closed by default
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className={isOpen ? 'dropdown light-bg ' : 'dropdown white-bg'}>
       <div className='dropdown__head' onClick={() => setIsOpen(!isOpen)}>
         <p className='white'>{props.title}</p>
-        <img
-          src={upArrow}
-          alt={isOpen ? "flèche vers le haut" : "flèche vers le bas"}
-          className={isOpen ? "dropdown__img" : "dropdown__img dropdown__img__rotated"}
-        />
+
+        {/* Add arrow up/down according to the state of the dropdown */}
+        <img src={upArrow} alt={isOpen ? "flèche vers le haut" : "flèche vers le bas"}
+          className={isOpen ? "dropdown__img" : "dropdown__img dropdown__img__rotated"} />
       </div>
       {
+        // Set dropdown body according to its input (paragraph or list)
         props.title !== 'Équipements' ? (
           <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
             {props.body}
