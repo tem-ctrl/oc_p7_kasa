@@ -19,4 +19,8 @@ Banner.propTypes = {
   about: propTypes.bool.isRequired
 }
 
+Banner.defaultProps = {
+  about: false
+}
+
 export default Banner
