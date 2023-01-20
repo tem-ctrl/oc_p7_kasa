@@ -9,19 +9,24 @@ L'occasion parfaite pour vous d'ajouter une belle référence à votre portfolio
 ## Comment accéder à cette page via un navigateur
 
 Pour exécuter ce projet, vous devez:
+
 ### 1. Cloner ce repo sur votre ordinateur
+
 `git clone https://github.com/tem-ctrl/oc_p7_kasa.git`
 
 ### 2. Installer les modules requis
+
 Ouvrir un terminal dans le dossier du projet et exécuter: `npm install`
 
-### 3. Démarrer le serveur de dévéloppemnet
+### 3. Démarrer le serveur de développemnet
+
 `npm start`
 
 ### 4. Ouvrir votre navigateur et saisissez cette url (si celà n'est pas fait automatiquement)
-`http://localhost:3000](http://localhost:3000)`
 
-La page rechargera à chaque modification/enregistrement de fichier dans le 
+`[http://localhost:3000](http://localhost:3000)`
+
+La page rechargera à chaque modification/enregistrement de fichier dans le
 
 <!--- ### `npm run build`
 
@@ -31,6 +36,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 --->
-
-
-
