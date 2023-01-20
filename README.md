@@ -26,7 +26,7 @@ Ouvrir un terminal dans le dossier du projet et exécuter: `npm install`
 
 `http://localhost:3000`
 
-La page rechargera à chaque modification/enregistrement de fichier dans le
+La page rechargera à chaque modification/enregistrement de fichier dans le projet.
 
 <!--- ### `npm run build`
 
