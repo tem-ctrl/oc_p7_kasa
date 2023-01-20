@@ -24,7 +24,7 @@ Ouvrir un terminal dans le dossier du projet et exécuter: `npm install`
 
 ### 4. Ouvrir votre navigateur et saisissez cette url (si celà n'est pas fait automatiquement)
 
-`[http://localhost:3000](http://localhost:3000)`
+`http://localhost:3000`
 
 La page rechargera à chaque modification/enregistrement de fichier dans le
 
