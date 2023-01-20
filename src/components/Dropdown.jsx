@@ -34,7 +34,7 @@ function Dropdown(props) {
 
 Dropdown.propTypes = {
   title: propTypes.string,
-  description: propTypes.oneOfType([propTypes.array, propTypes.string])
+  description: propTypes.oneOfType([propTypes.arrayOf(propTypes.string), propTypes.string])
 }
 
 Dropdown.defaultProps = {
