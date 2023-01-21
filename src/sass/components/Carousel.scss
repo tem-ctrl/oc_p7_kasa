@@ -20,7 +20,6 @@
     @include large-border;
     @include dimensions();
     object-fit: cover;
-    display: initial;
   }
   &__arrow {
     position: absolute;
