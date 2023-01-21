@@ -3,32 +3,24 @@
 */
 
 .carousel {
-  @include flex-display();
   @include dimensions($h: $carousel-height-sm);
   @include large-border;
-  overflow: hidden;
   margin: 15px auto;
   position: relative;
   &__arrows {
     display: contents;
   }
-  &__item {
-    @include flex-display($jc: center, $ai: center);
-    &__number {
-      position: absolute;
-      bottom: 30px;
-      left: 49%;
-      display: none;
-    }
+  &__number {
+    position: absolute;
+    bottom: 25px;
+    left: 49%;
+    display: none;
   }
   &__img {
     @include large-border;
-    display: none;
-    &__active {
-      width: 100%;
-      object-fit: cover;
-      display: initial;
-    }
+    @include dimensions();
+    object-fit: cover;
+    display: initial;
   }
   &__arrow {
     position: absolute;
@@ -50,10 +42,8 @@
   @include desktop-breakpoint {
     margin: 40px auto;
     @include dimensions($h: $carousel-height);
-    &__item {
-      &__number {
-        display: initial;
-      }
+    &__number {
+      display: initial;
     }
     &__arrow {
       bottom: calc(($carousel-height - $carousel-arrow-height) / 2);
