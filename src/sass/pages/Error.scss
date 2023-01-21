@@ -18,7 +18,6 @@
     margin: 20% auto 5px;
     padding: 7.5px 10px;
     @include small-border;
-
     &:hover,
     &:focus {
       background-color: $color-light-bg;
@@ -26,22 +25,18 @@
       font-weight: bold;
     }
   }
-
-  @media all and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     height: calc(140vh - $header-height - $footer-height);
     &__h1 {
       @include font($fs: 240px, $fw: 700);
       margin-top: 4%;
     }
-
     &__h2 {
       @include font($fs: 32px);
     }
-
     &__sm {
       display: none;
     }
-
     &__link {
       @include font();
       margin: 5% auto 20px;

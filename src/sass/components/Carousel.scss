@@ -9,11 +9,9 @@
   overflow: hidden;
   margin: 15px auto;
   position: relative;
-
   &__arrows {
     display: contents;
   }
-
   &__item {
     @include flex-display($jc: center, $ai: center);
     &__number {
@@ -23,25 +21,21 @@
       display: none;
     }
   }
-
   &__img {
     @include large-border;
     display: none;
-
     &__active {
       min-width: 100%;
       object-fit: cover;
       display: block;
     }
   }
-
   &__arrow {
     position: absolute;
     bottom: calc(($carousel-height-sm - $carousel-arrow-height-sm) / 2);
     max-height: $carousel-arrow-height-sm;
     max-width: $carousel-arrow-width-sm;
     cursor: pointer;
-
     &:hover,
     &:focus {
       transform: scale(1.1);
@@ -53,7 +47,7 @@
       right: 7.5px;
     }
   }
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     margin: 40px auto;
     @include dimensions($h: $carousel-height);
     &__item {

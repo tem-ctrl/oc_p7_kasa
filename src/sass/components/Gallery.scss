@@ -6,8 +6,7 @@
   @include flex-display($jc: center, $ai: center, $wr: wrap, $ga: 20px);
   margin-bottom: 40px;
   padding: 0px;
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     @include flex-display($ga: 40px, $jc: space-evenly, $wr: wrap);
     @include large-border;
     background-color: $color-light-bg;

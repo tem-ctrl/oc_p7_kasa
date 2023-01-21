@@ -26,13 +26,11 @@
     padding: 20px;
     @include font($fs: 12px, $lh: 18px);
     list-style-type: none;
-
     &--closed {
       display: none;
     }
   }
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     &__head {
       @include dimensions($h: 47px);
       @include font($fs: 24px);

@@ -2,8 +2,7 @@
   width: 100%;
   @include flex-display($di: column, $ai: center, $ga: 20px);
   margin: 0 auto 45px;
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     width: 82.5%;
     gap: 35px;
   }

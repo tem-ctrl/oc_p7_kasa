@@ -6,15 +6,12 @@
   @include flex-display($ga: 3px);
   @include dimensions($h: 18px, $w: fit-content);
   margin-top: 18px;
-
   &__star {
     @include dimensions($h: 15px, $w: 15px);
   }
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     column-gap: 6px;
     @include dimensions($h: 36px, $w: fit-content);
-
     &__star {
       @include dimensions($h: 30px, $w: 30px);
     }

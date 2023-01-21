@@ -6,11 +6,9 @@
   @include dimensions($h: $header-height-sm);
   @include flex-display($jc: space-between, $ai: center);
   padding: 40px $main-margin-sm;
-
   &__logo {
     @include dimensions($h: 48px, $w: 110px);
   }
-
   @media all and (min-width: $desktop-breakpoint) {
     @include dimensions($h: $header-height);
     padding: 40px $main-margin;
@@ -19,19 +17,17 @@
     }
   }
 }
-
 .nav {
   @include flex-display($ai: center, $ga: 20px);
 
   &__link {
-    // font-size: 14px;
     @include font($fs: 14px);
     &:hover,
     &:focus {
       text-decoration: underline;
     }
   }
-  @media all and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     column-gap: 50px;
 
     &__link {

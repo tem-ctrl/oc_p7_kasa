@@ -16,7 +16,7 @@
 .main {
   margin: 0 $main-margin-sm;
   flex-grow: 1;
-  @media all and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     margin: 0 $main-margin;
   }
 }

@@ -9,8 +9,7 @@
   @include flex-display($jc: center, $ai: center);
   @include dimensions($w: fit-content, $h: 18px);
   padding: 0px 20px 1px;
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     @include medium-border;
     @include font($fs: 14px);
     @include dimensions($w: fit-content, $h: 25px);

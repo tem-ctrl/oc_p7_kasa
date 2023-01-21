@@ -7,16 +7,13 @@
   @include dimensions($h: $footer-height-sm);
   background-color: #000;
   justify-self: flex-end;
-
   &__h2 {
     @include font($fs: 12px);
   }
-
   &__logo {
     @include dimensions($h: 36px);
   }
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     padding-top: 50px;
     @include dimensions($h: $footer-height);
     &__h2 {

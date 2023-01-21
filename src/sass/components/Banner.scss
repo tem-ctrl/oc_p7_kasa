@@ -8,14 +8,12 @@
   padding-left: 20px;
   margin-bottom: 22px;
   mix-blend-mode: darken;
-
   &__home {
     height: 111px;
     background: url("../../assets/banner-bg.png"),
       url("../../assets/banner.png") no-repeat;
     background-size: cover;
     background-position: bottom;
-
     &__h1 {
       @include font($fs: 24px);
     }
@@ -25,31 +23,25 @@
     background: url("../../assets/about-sm.png"),
       url("../../assets/about.png") no-repeat;
     background-size: cover;
-
     &__h1 {
       display: none;
     }
   }
-
-  @media screen and (min-width: $desktop-breakpoint) {
+  @include desktop-breakpoint {
     @include large-border;
     justify-content: center;
     margin: 30px auto 45px;
-
     &__home {
       height: 223px;
-
       &__h1 {
         @include font($fs: 48px);
       }
     }
-
     &__about {
       background: url("../../assets/banner-bg.png"),
         url("../../assets/about.png") no-repeat;
       background-size: cover;
     }
-
     &__sm {
       display: none;
     }
