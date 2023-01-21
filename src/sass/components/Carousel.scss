@@ -25,9 +25,9 @@
     @include large-border;
     display: none;
     &__active {
-      min-width: 100%;
+      width: 100%;
       object-fit: cover;
-      display: block;
+      display: initial;
     }
   }
   &__arrow {
