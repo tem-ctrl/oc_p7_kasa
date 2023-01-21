@@ -8,7 +8,8 @@
   background: linear-gradient(180deg, #ffffff00 0%, #00000080 100%);
   position: relative;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 0 12px 3px $color-primary;
     transform: scale(1.01);
   }
@@ -22,6 +23,7 @@
   &__img {
     @include medium-border;
     @include dimensions();
+    object-fit: fill;
   }
   @include desktop-breakpoint {
     @include dimensions($h: 340px, $w: 340px);
