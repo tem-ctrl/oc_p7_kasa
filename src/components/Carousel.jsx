@@ -6,52 +6,35 @@ import { houseContext } from '../pages/House'
 function Carousel() {
 
   // Set current image index to 0
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [index, setIndex] = useState(1)
 
   // Get house data from context
-  const house = useContext(houseContext)
+  const pictures = useContext(houseContext).pictures
 
   // Get the number of pictures for the carousel
-  const maxLength = house.pictures.length
+  const numPictures = pictures.length
 
-  // Set next index according to the direction chosed by the user
+  // Set next index according to the direction
   function Scroll(direction) {
-    if (direction === 'right') {
-      return setCurrentIndex(currentIndex === maxLength - 1 ? 0 : currentIndex + 1)
-    } else {
-      return setCurrentIndex(currentIndex === 0 ? maxLength - 1 : currentIndex - 1)
-    }
+    direction === 'right'
+      ? (setIndex(index === numPictures ? 1 : index + 1))
+      : (setIndex(index === 1 ? numPictures : index - 1))
+    return index
   }
 
   return (
     <div className="carousel light-bg">
-      {house.pictures.map((picture, index) => (
-        <div className="carousel__item" key={`${house.id}-${index}`}>
-
-          {/* Add scroll arrows if there's more than one picture */}
-          {maxLength > 1 && (
-            <div className="carousel__arrows">
-              <img src={arrowLeft} alt='flèche gauche'
-                className='carousel__arrow carousel__arrow--left' onClick={() => (Scroll('left'))} />
-              <img src={arrowRight} alt='flèche droite'
-                className='carousel__arrow carousel__arrow--right' onClick={() => (Scroll('right'))} />
-            </div>
-          )}
-          {/* Add picture number over total number of pictures */}
-          {index === currentIndex && (
-            <p className="carousel__item__number white">
-              {currentIndex + 1}/{maxLength}
-            </p>
-          )}
-          {/* Add image and set classes according to its index */}
-          {index === currentIndex && (
-            <img className={index === currentIndex ? ("carousel__img carousel__img__active") : ("carousel__img")}
-              src={picture}
-              alt="Une des photos de l'appartement"
-            />
-          )}
+      {numPictures > 1 && (
+        <div className="carousel__arrows">
+          <img src={arrowLeft} alt='flèche gauche'
+            className='carousel__arrow carousel__arrow--left' onClick={() => (Scroll('left'))} />
+          <img src={arrowRight} alt='flèche droite'
+            className='carousel__arrow carousel__arrow--right' onClick={() => (Scroll('right'))} />
         </div>
-      ))}
+      )}
+
+      <p className="carousel__number white"> {index}/{numPictures}</p>
+      <img className="carousel__img" src={pictures[index - 1]} alt="une des photos du logement" />
     </div>
   )
 }

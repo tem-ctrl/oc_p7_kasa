@@ -23,6 +23,7 @@
   &__img {
     @include medium-border;
     @include dimensions();
+    object-fit: fill;
   }
   @include desktop-breakpoint {
     @include dimensions($h: 340px, $w: 340px);
