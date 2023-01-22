@@ -26,6 +26,6 @@
     object-fit: fill;
   }
   @include desktop-breakpoint {
-    @include dimensions($h: 340px, $w: 340px);
+    @include dimensions($h: 325px, $w: 325px);
   }
 }

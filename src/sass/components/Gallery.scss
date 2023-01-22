@@ -10,6 +10,6 @@
     @include flex-display($ga: 30px, $jc: space-evenly, $wr: wrap);
     @include large-border;
     background-color: $color-light-bg;
-    padding: 30px;
+    padding: 40px;
   }
 }

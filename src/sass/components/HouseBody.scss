@@ -33,6 +33,7 @@
     }
     &__location {
       @include font();
+      margin: 20px 0px;
     }
     &__host {
       @include flex-display($di: column, $jc: center, $ai: flex-end);
