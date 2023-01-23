@@ -1,24 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kasa",
+  "name": "Kasa, Agence de location immobilière",
+  "description": "Trouvez des logements à louer partout en France. La grande variété de prix, standings, localisations, surface habitable... vous garantie une entière satisfaction.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "id": "oc_p7_kasa",
+  "start_url": "oc_p7_kasa",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
