@@ -1,10 +1,7 @@
-import { createContext } from 'react'
+import { Fragment } from 'react'
 import Banner from '../components/Banner'
 import Gallery from '../components/Gallery'
-import { houses } from '../data/logements'
 
-// Create context to share houses data with app's children
-export const AppContext = createContext(houses)
 
 function Home() {
   // Set Page title
@@ -12,10 +9,10 @@ function Home() {
   title.textContent = 'Kasa - Accueil'
 
   return (
-    <AppContext.Provider value={houses}>
+    <Fragment>
       <Banner about={false} />
       <Gallery />
-    </AppContext.Provider>
+    </Fragment>
   )
 }
 

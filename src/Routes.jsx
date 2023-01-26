@@ -7,13 +7,12 @@ import Footer from './components/Footer'
 import House from './pages/House'
 import ScrollToTop from './utils/ScrollToTop'
 
+
+// Open each route at the top of the page
+//  Include header and footer to each page 
+//  Define different routes 
 const MyRoutes = (
   <BrowserRouter>
-
-    {/* Open each route at the top of the page
-       Include header and footer to each page 
-       Define different routes */}
-
     <ScrollToTop>
       <Header />
       <main className='main'>

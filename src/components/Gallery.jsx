@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { AppContext } from '../pages/Home'
+import { AppContext } from '../'
 import Card from './Card'
 
 function Gallery() {

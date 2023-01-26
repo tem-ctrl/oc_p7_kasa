@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 import Error from '../pages/Error'
-import { AppContext } from './Home'
+import { AppContext } from '../'
 import HouseBody from '../components/HouseBody'
 
 // Context to provide to its children
