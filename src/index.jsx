@@ -1,7 +1,7 @@
 import { StrictMode, createContext } from 'react'
 import { createRoot } from 'react-dom/client'
 import MyRoutes from './Routes'
-import { houses } from './data/logements'
+import { houses } from './data/logements1'
 import './sass/main.scss'
 
 const root = createRoot(document.getElementById('root'))
