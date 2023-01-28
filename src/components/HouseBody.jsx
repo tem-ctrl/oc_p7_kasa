@@ -30,7 +30,7 @@ function HouseBody() {
 
       <div className='house__desc'>
         <Dropdown title="Description" body={house.description} />
-        <Dropdown title="Équipements" body={house.equipments} />
+        <Dropdown title="Équipements" body={house.equipments} isList={true} />
       </div>
     </Fragment>
   )

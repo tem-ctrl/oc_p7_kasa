@@ -18,14 +18,14 @@ function Dropdown(props) {
       </div>
       {
         // Set dropdown body according to its input (paragraph or list)
-        props.title !== 'Équipements' ? (
-          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
-            {props.body}
-          </p>
-        ) : (
+        props.isList ? (
           <ul className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
             {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
           </ul>
+        ) : (
+          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
+            {props.body}
+          </p>
         )
       }
     </div>
@@ -34,12 +34,14 @@ function Dropdown(props) {
 
 Dropdown.propTypes = {
   title: propTypes.string,
-  description: propTypes.oneOfType([propTypes.arrayOf(propTypes.string), propTypes.string])
+  description: propTypes.oneOfType([propTypes.arrayOf(propTypes.string), propTypes.string]),
+  isList: propTypes.bool
 }
 
 Dropdown.defaultProps = {
   title: 'Description',
-  description: "votre description ici..."
+  description: "votre description ici...",
+  isList: false
 }
 
 export default Dropdown
