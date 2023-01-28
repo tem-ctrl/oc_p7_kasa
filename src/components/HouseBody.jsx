@@ -29,7 +29,7 @@ function HouseBody() {
       </section>
 
       <div className='house__desc'>
-        <Dropdown title="Description" body={house.description} />
+        <Dropdown title="Description" body={house.description} isList={false} />
         <Dropdown title="Équipements" body={house.equipments} isList={true} />
       </div>
     </Fragment>

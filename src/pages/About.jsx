@@ -16,7 +16,7 @@ function About() {
         {/* Return as much Dropdowns as aboutData length with corresponding information */}
         {
           aboutData.map((elt) => (
-            <Dropdown title={elt.title} body={elt.body} key={elt.title} className='about__drop' />
+            <Dropdown title={elt.title} body={elt.body} key={elt.title} isList={false} className='about__drop' />
           ))
         }
       </div>
