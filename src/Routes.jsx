@@ -7,25 +7,26 @@ import Footer from './components/Footer'
 import House from './pages/House'
 import ScrollToTop from './utils/ScrollToTop'
 
-
 // Open each route at the top of the page
 //  Include header and footer to each page 
 //  Define different routes 
-const MyRoutes = (
-  <BrowserRouter>
-    <ScrollToTop>
-      <Header />
-      <main className='main'>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/house/:houseId' element={<House />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
-      </main>
-      <Footer />
-    </ScrollToTop>
-  </BrowserRouter>
-)
+function MyRoutes() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop>
+        <Header />
+        <main className='main'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/house/:houseId' element={<House />} />
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </main>
+        <Footer />
+      </ScrollToTop>
+    </BrowserRouter>
+  )
+}
 
 export default MyRoutes

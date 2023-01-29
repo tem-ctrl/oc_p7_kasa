@@ -1,7 +1,7 @@
 import { StrictMode, createContext } from 'react'
 import { createRoot } from 'react-dom/client'
 import MyRoutes from './Routes'
-import { houses } from './data/logements1'
+import { houses } from './data/logements'
 import './sass/main.scss'
 
 const root = createRoot(document.getElementById('root'))
@@ -13,9 +13,7 @@ export const AppContext = createContext(houses)
 root.render(
   <AppContext.Provider value={houses}>
     <StrictMode>
-      {
-        MyRoutes
-      }
+      <MyRoutes />
     </StrictMode>
   </AppContext.Provider>
 )
