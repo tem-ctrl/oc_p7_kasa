@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 
 function Error() {
-  // Error page body
+  // Set page title
+  const title = document.querySelector('title')
+  title.textContent = 'Page inexistante'
+
   return (
     <div className='main error'>
       <h1 className='error__h1'>404</h1>
