@@ -1,5 +1,4 @@
-import Banner from '../components/Banner'
-import Dropdown from '../components/Dropdown'
+import { Banner, Dropdown } from '../components'
 import { aboutData } from '../data/aboutData'
 
 function About() {

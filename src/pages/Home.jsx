@@ -1,6 +1,4 @@
-import Banner from '../components/Banner'
-import Gallery from '../components/Gallery'
-
+import { Banner, Gallery } from '../components'
 
 function Home() {
   // Set Page title
