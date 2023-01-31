@@ -24,6 +24,7 @@
     @include medium-border;
     @include dimensions();
     object-fit: fill;
+    mix-blend-mode: darken;
   }
   @include desktop-breakpoint {
     @include dimensions($h: 325px, $w: 325px);

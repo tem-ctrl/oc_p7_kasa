@@ -4,8 +4,8 @@ function Banner(props) {
 
   // Create different classNames for house and about pages banners
   const classes = props.about ?
-    ["section banner banner__about", " h1 white banner__about__h1"]
-    : ["section banner banner__home", "h1 white banner__home__h1"]
+    ["banner banner__about", "white banner__about__h1"]
+    : ["banner banner__home", "white banner__home__h1"]
 
   return (
     <section className={classes[0]}>
