@@ -2,29 +2,29 @@ import { useState } from 'react'
 import upArrow from '../assets/arrow-up.png'
 import propTypes from 'prop-types'
 
-function Dropdown(props) {
+function Dropdown({title, body, isList}) {
 
   // Set dropdown to be closed by default
-  const [isOpen, setIsOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
-    <div className={isOpen ? 'dropdown light-bg ' : 'dropdown white-bg'}>
-      <div className='dropdown__head' onClick={() => setIsOpen(!isOpen)}>
-        <p className='white'>{props.title}</p>
+    <div className={open ? 'dropdown light-bg ' : 'dropdown white-bg'}>
+      <div className='dropdown__head' onClick={() => setOpen(!open)}>
+        <p className='white'>{title}</p>
 
         {/* Add arrow up/down according to the state of the dropdown */}
-        <img src={upArrow} alt={isOpen ? "flèche vers le haut" : "flèche vers le bas"}
-          className={isOpen ? "dropdown__img" : "dropdown__img dropdown__img__rotated"} />
+        <img src={upArrow} alt={open ? "flèche vers le haut" : "flèche vers le bas"}
+          className={open ? "dropdown__img" : "dropdown__img dropdown__img__rotated"} />
       </div>
       {
         // Set dropdown body according to its input (paragraph or list)
-        props.isList ? (
-          <ul className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
-            {props.body.map((elt) => (<li key={elt}>{elt}</li>))}
+        isList ? (
+          <ul className={open ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
+            {body.map((elt) => (<li key={elt}>{elt}</li>))}
           </ul>
         ) : (
-          <p className={isOpen ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
-            {props.body}
+          <p className={open ? 'dropdown__body light-bg ' : 'dropdown__body dropdown__body--closed'}>
+            {body}
           </p>
         )
       }
@@ -34,13 +34,13 @@ function Dropdown(props) {
 
 Dropdown.propTypes = {
   title: propTypes.string,
-  description: propTypes.oneOfType([propTypes.arrayOf(propTypes.string), propTypes.string]),
+  body: propTypes.oneOfType([propTypes.arrayOf(propTypes.string), propTypes.string]),
   isList: propTypes.bool
 }
 
 Dropdown.defaultProps = {
   title: 'Description',
-  description: "votre description ici...",
+  body: "votre description ici...",
   isList: false
 }
 

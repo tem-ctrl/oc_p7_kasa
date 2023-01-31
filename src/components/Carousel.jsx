@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react'
+import propTypes from 'prop-types'
 import arrowLeft from '../assets/arrow-left.png'
 import arrowRight from '../assets/arrow-right.png'
 import { houseContext } from '../pages/House'
@@ -36,5 +37,10 @@ function Carousel() {
     </div>
   )
 }
+
+Carousel.propTypes = {
+  pictures: propTypes.arrayOf(propTypes.string)
+}
+
 
 export default Carousel

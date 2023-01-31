@@ -11,9 +11,9 @@ export const AppContext = createContext(houses)
 
 // Render app routes inside the div element with id "root"
 root.render(
-  <AppContext.Provider value={houses}>
-    <StrictMode>
+  <StrictMode>
+    <AppContext.Provider value={houses}>
       <MyRoutes />
-    </StrictMode>
-  </AppContext.Provider>
+    </AppContext.Provider>
+  </StrictMode>
 )

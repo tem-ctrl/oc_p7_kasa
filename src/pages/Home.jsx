@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <>
-      <Banner about={false} />
+      <Banner />
       <Gallery />
     </>
   )
