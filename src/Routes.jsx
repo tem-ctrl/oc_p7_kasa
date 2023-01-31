@@ -1,10 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Error from './pages/Error'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import House from './pages/House'
+import { About, ErrorPage, Home, House } from './pages'
+import { Footer, Header } from './components'
 import ScrollToTop from './utils/ScrollToTop'
 
 // Open each route at the top of the page
@@ -20,7 +16,7 @@ function MyRoutes() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/house/:houseId' element={<House />} />
-            <Route path='*' element={<Error />} />
+            <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>
         <Footer />

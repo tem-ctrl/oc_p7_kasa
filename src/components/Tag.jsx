@@ -1,9 +1,9 @@
 import propTypes from 'prop-types'
 
-function Tag(props) {
+function Tag({ name }) {
   return (
     <div className="tag">
-      <p className="white">{props.name}</p>
+      <p className="white">{name}</p>
     </div>
   )
 }

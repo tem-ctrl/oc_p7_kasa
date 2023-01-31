@@ -1,15 +1,12 @@
 import { createContext, useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import Carousel from '../components/Carousel'
-import Error from '../pages/Error'
 import { AppContext } from '../'
-import HouseBody from '../components/HouseBody'
+import { Carousel, Error, HouseBody } from '../components'
 
 // Context to provide to its children
 export const houseContext = createContext(null)
 
 function House() {
-
   // Extract house id from url  
   const { houseId } = useParams()
 
@@ -22,7 +19,6 @@ function House() {
       <Error />
     )
   } else {
-
     // Set the page title
     const title = document.querySelector('title')
     title.textContent = `Kasa - ${house.title}`
