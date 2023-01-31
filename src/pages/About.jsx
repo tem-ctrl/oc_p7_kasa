@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Banner from '../components/Banner'
 import Dropdown from '../components/Dropdown'
 import { aboutData } from '../data/aboutData'
@@ -10,7 +9,7 @@ function About() {
   title.textContent = 'Kasa - A Propos'
 
   return (
-    <Fragment>
+    <>
       <Banner about={true} />
       <div className='about'>
         {/* Return as much Dropdowns as aboutData length with corresponding information */}
@@ -20,7 +19,7 @@ function About() {
           ))
         }
       </div>
-    </Fragment>
+    </>
   )
 }
 

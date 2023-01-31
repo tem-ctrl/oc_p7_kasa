@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Banner from '../components/Banner'
 import Gallery from '../components/Gallery'
 
@@ -9,10 +8,10 @@ function Home() {
   title.textContent = 'Kasa - Accueil'
 
   return (
-    <Fragment>
+    <>
       <Banner about={false} />
       <Gallery />
-    </Fragment>
+    </>
   )
 }
 
