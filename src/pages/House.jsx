@@ -13,24 +13,16 @@ function House() {
   // Find house by id from AppContext
   const house = useContext(AppContext).find((elt) => elt.id === houseId)
 
-  // Return Error Page if house don't exist
-  if (!house) {
-    return (
-      <Error />
-    )
-  } else {
-    // Set the page title
-    const title = document.querySelector('title')
-    title.textContent = `Kasa - ${house.title}`
-
-    return (
+  return (
+    house ? (
       // Provide house data to its children
       <houseContext.Provider value={house}>
         <Carousel />
         <HouseBody />
       </houseContext.Provider>
-    )
-  }
+    ) : (
+      <Error />
+    ))
 }
 
 export default House
